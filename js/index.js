@@ -198,6 +198,13 @@ $(document).ready(function(){
     })
     
 
+    //slider-video click
+    $('.separate-slider__video').click(function(e){
+        $(this).children('video').attr('controls', 'true')
+        $(this).children('video')[0].play()
+        $(this).children('.video__btn__play').css('display', 'none')
+    })
+
     //slider announcements
     let announcementsSwiper = new Swiper('.swiper.carousel-announcements', {
         slidesPerView: 1,
@@ -238,14 +245,6 @@ $(document).ready(function(){
             nextEl: '.separate-slider__btns__container .swiper-button-next',
             prevEl: '.separate-slider__btns__container .swiper-button-prev',
         },
-        // breakpoints: {
-        //     750:{
-        //         slidesPerView: 2,
-        //     },
-        //     910:{
-        //         slidesPerView: 3,
-        //     },
-        // }
     })
 
 
