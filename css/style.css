@@ -4189,6 +4189,36 @@ h6 {
   filter: grayscale(100%);
 }
 
+.iframe {
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 95px;
+}
+@media screen and (max-width: 910px) {
+  .iframe {
+    padding-bottom: 50px;
+  }
+}
+
+.iframe__wrapper {
+  padding-top: 75px;
+}
+@media screen and (max-width: 910px) {
+  .iframe__wrapper {
+    padding-top: 0px;
+  }
+}
+.iframe__wrapper iframe {
+  width: 100%;
+  height: 600px;
+}
+@media screen and (max-width: 910px) {
+  .iframe__wrapper iframe {
+    height: 400px;
+  }
+}
+
 .footer {
   overflow: hidden;
   background: #EFEFEF;
