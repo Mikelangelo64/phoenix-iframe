@@ -29,6 +29,20 @@ $(document).ready(function(){
         $('.btn__search__appear').click(function(e){
             $(document.body).toggleClass('_lock')
         })
+
+        $('.search-form__close').click(function(e){
+            $('.btn__search__appear').attr('aria-expanded', 'false')
+            $(document.body).removeClass('_lock')
+
+            $('.search-form').removeClass('collapse')
+            $('.search-form').addClass('collapsing')
+            $('.search-form').removeClass('show')
+            setTimeout(() => {
+                $('.search-form').removeClass('collapsing')
+                $('.search-form').addClass('collapse')
+
+            }, 300);
+        })
     }
 
     //header & scroll-appear
@@ -67,6 +81,11 @@ $(document).ready(function(){
 
 
         
+    })
+
+    $('._scroll-to-top').click(function(e){
+        e.preventDefault()
+        $('html, body').animate({scrollTop:0}, '300');
     })
 
     //navigation hide
